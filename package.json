@@ -5,7 +5,9 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "mocha --exit",
-    "build": "./scripts/build.sh"
+    "build": "./scripts/build.sh",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Bobby Brennan",
   "license": "MIT",
@@ -23,7 +25,8 @@
   },
   "dependencies": {
     "entities": "^2.0.3",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.19",
+    "@snyk/protect": "latest"
   },
   "directories": {
     "test": "test"
@@ -44,5 +47,6 @@
     "RSS parser",
     "RSS to JS",
     "Feed reader"
-  ]
+  ],
+  "snyk": true
 }
